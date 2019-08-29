@@ -12,7 +12,7 @@ namespace CategoryToProduct.Repository.Models
 
         public string Name { get; set; }
 
-        public virtual Category Categor { get; set; }
+        public virtual List<Category> Categories { get; set; }
 
         public bool IsDelete { get; set; }
     }

@@ -51,17 +51,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CatprodEntity.cs" />
+    <Compile Include="Migrations\201908291720017_Initial.cs" />
+    <Compile Include="Migrations\201908291720017_Initial.Designer.cs">
+      <DependentUpon>201908291720017_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\IDeletable.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ProductCategoriesRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Repositories\" />
+    <EmbeddedResource Include="Migrations\201908291720017_Initial.resx">
+      <DependentUpon>201908291720017_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
