@@ -16,7 +16,21 @@ namespace CategoryToProduct.Repository
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Product> Products { get; set; }
 
-        //public virtual DbSet<CategoryProduct>  CategoryProducts { get; set; }
+        public override int SaveChanges()
+        {
+            foreach (var entry in ChangeTracker
+                .Entries<IDeletable>()
+                .Where(e => e.State == System.Data.Entity.EntityState.Deleted))
+            {
+                entry.Entity.IsDelete = true;
+                entry.State = System.Data.Entity.EntityState.Modified;
+            }
+
+            return base.SaveChanges();
+        }
 
     }
+
+
+
 }

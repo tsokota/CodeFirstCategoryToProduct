@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace CategoryToProduct.Repository.Repositories
 {
-    public interface IProductCategoriesRepositor
+    public interface IProductCategoriesRepository
     {
         List<ProductCategories> GetList();
     }
-    public class ProductCategoriesRepository : IProductCategoriesRepositor
+    public class ProductCategoriesRepository : IProductCategoriesRepository
     {
         public List<ProductCategories> GetList()
         {

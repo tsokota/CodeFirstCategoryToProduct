@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CategoryToProduct.Repository.Models
 {
     public class ProductCategories
-    {
+    { // FOR USER ONLY
         public int Id { get; set; }
 
         public string ProductName { get; set; }

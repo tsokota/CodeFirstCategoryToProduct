@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CategoryToProduct.Repository.Models
 {
-    public class Category : IDeletable
+    public class Category : IDeletable, IDateble
     {
         public int Id { get; set; }
 
@@ -17,5 +17,7 @@ namespace CategoryToProduct.Repository.Models
         public virtual Category SubCategoryId { get; set; }
 
         public bool IsDelete { get; set; }
+
+        public Nullable<DateTime> DelitingDate { get; set; }
     }
 }

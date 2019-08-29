@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CategoryToProduct.Repository.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,9 +16,11 @@ namespace CategoryToProduct.MVC.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ProductCategoriesRepository repository = new ProductCategoriesRepository();
 
-            return View();
+
+
+            return View(repository.GetList());
         }
 
         public ActionResult Contact()
