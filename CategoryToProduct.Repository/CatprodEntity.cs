@@ -23,6 +23,7 @@ namespace CategoryToProduct.Repository
                 .Where(e => e.State == System.Data.Entity.EntityState.Deleted))
             {
                 entry.Entity.IsDelete = true;
+                entry.Entity.DelitingDate = DateTime.Now;
                 entry.State = System.Data.Entity.EntityState.Modified;
             }
 

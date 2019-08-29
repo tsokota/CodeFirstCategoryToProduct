@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CategoryToProduct.Repository.Models
 {
-    public interface IDeletable
+    public interface IDeletable : IDateble
     {
         bool IsDelete { get; set; }
     }

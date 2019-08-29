@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CategoryToProduct.Repository.Models
 {
-    public class Category : IDeletable, IDateble
+    public class Category : IDeletable
     {
         public int Id { get; set; }
 
